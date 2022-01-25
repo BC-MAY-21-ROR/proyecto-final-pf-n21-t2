@@ -21,61 +21,61 @@ Páginas
 
 Usuario
 Si el usuario es nuevo, configural lo siguiente:
--Introducir preferencias (cuenta nueva sin preferencias) - Modal
--Usuario recomendados (usuarios con más seguidores dentro de tus preferencias)
+- Introducir preferencias (cuenta nueva sin preferencias) - Modal
+- Usuario recomendados (usuarios con más seguidores dentro de tus preferencias)
 
 Contenido para todas las vistas
 
 Navbar - header
 Eventos de gente a la que sigues (tipo notificaciones)
--Botón para crear evento (puede ser un div modal - popup)
--Drop down para acceder a la configuración (en la configuración se pueden cambiar las preferencias del contenido a visualizar, y la configuración del perfil) y para cerrar sesión.
--Buscador
+- Botón para crear evento (puede ser un div modal - popup)
+- Drop down para acceder a la configuración (en la configuración se pueden cambiar las preferencias del contenido a visualizar, y la configuración del perfil) y para cerrar sesión.
+- Buscador
 Footer
 
 Vistas
--Login
--Home
--Configuración
--Resultados del buscador
--Reproductor
+- Login
+- Home
+- Configuración
+- Resultados del buscador
+- Reproductor
 
 Login
--Formulario de inicio de sesión o de registro (nuevo usuario)
+- Formulario de inicio de sesión o de registro (nuevo usuario)
 
 Home (contenido a mostrar):
--Contenido (los vídeos) de las personas que sigues
--Algunas opciones relacionadas (como categorías)
+- Contenido (los vídeos) de las personas que sigues
+- Algunas opciones relacionadas (como categorías)
 
 Configuración
--Configuración general (foto de perfil, nombre, preferencias de contenido)
+- Configuración general (foto de perfil, nombre, preferencias de contenido)
 
 Resultados del buscador
--Resultados de la búsqueda
--Filtros 
-  -Usuario
-  -Eventos
-  -Videos
+- Resultados de la búsqueda
+- Filtros 
+  - Usuario
+  - Eventos
+  - Videos
 
 Reproductor
--Video (embebido desde YouTube)
--Usuario
+- Video (embebido desde YouTube)
+- Usuario
 
 
 
 
 ### Requerimientos no funcionales
 Calidad
--Utilizar estilo de código definido por la comunidad (apoyarse en Rubocop)
--Utilizar SandiMeter para analizar el código y utilizar el resultado para hacer mejoras
--Presentación correcta en las versiones más recientes de los principales navegadores: Edge, Chrome, Safari y Firefox
+- Utilizar estilo de código definido por la comunidad (apoyarse en Rubocop)
+- Utilizar SandiMeter para analizar el código y utilizar el resultado para hacer mejoras
+- Presentación correcta en las versiones más recientes de los principales navegadores: Edge, Chrome, Safari y Firefox
 
 Deployment
--Configuración de un servidor web (heroku o similar) para el deployment automático de actualizaciones de la app
+- Configuración de un servidor web (heroku o similar) para el deployment automático de actualizaciones de la app
 
 Frontend
--CSS: libertad para utilizar cuaquier framework o librería, preferentemente SASS
-  -Por ejemplo puedes utilizar Bootsrap junto con bootstrap_form para tus formularios
+- CSS: libertad para utilizar cuaquier framework o librería, preferentemente SASS
+  - Por ejemplo puedes utilizar Bootsrap junto con bootstrap_form para tus formularios
 
 ## Diseño del MVP
 
