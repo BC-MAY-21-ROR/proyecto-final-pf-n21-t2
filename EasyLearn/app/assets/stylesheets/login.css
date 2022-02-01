@@ -1,78 +1,78 @@
 h2{
-		font-family: Script MT;
-		font-size: 64px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 77px;
-		letter-spacing: 0em;
-		text-align: center;
+	font-family: Script MT;
+	font-size: 64px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 77px;
+	letter-spacing: 0em;
+	text-align: center;
 }
 
 img{
-height: 90px;
+	height: 90px;
 }
 
 input{
-		background-color:transparent !important;
-		border:none !important;
-		border-bottom: solid rgba(247, 133, 40, 1)!important;
-		color: white !important;
-		margin-bottom: 1.5rem;
+	background-color:transparent !important;
+	border:none !important;
+	border-bottom: solid rgba(247, 133, 40, 1)!important;
+	color: white !important;
+	margin-bottom: 1.5rem;
 }
 
 label{
-		font-size: 14px;
-		font-style: normal;
-		color: rgba(247, 133, 40, 1);
-		font-weight: 450;
-		line-height: 17px;
+	font-size: 14px;
+	font-style: normal;
+	color: rgba(247, 133, 40, 1);
+	font-weight: 450;
+	line-height: 17px;
 }
 
 button{
-		background-color: rgba(247, 133, 40, 1)!important;
-		font: 94px;
-		width: 289px;
-		height: 59px;
-		border-radius: 15px!important;
-		margin-top: 1.5rem;
+	background-color: rgba(247, 133, 40, 1)!important;
+	font: 94px;
+	width: 289px;
+	height: 59px;
+	border-radius: 15px!important;
+	margin-top: 1.5rem;
 }
 
 span{
-		font-size: 24px;
-		font-style: normal;
-		font-weight: 750;
-		line-height: 29px;
-		letter-spacing: 0.08em;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 750;
+	line-height: 29px;
+	letter-spacing: 0.08em;
 }
 
 a{
-		color: rgba(247, 133, 40, 1);
-		text-decoration: none;   
+	color: rgba(247, 133, 40, 1);
+	text-decoration: none;   
 }
 
 .card{
-		background-color: rgba(228, 228, 228, 0.07) !important;
+	background-color: rgba(228, 228, 228, 0.07) !important;
 }
 
 .text-divider {
-		display: flex;
-		align-items: center;
-		--text-divider-gap: 1rem;
-		margin: 2rem 0 2rem 0;
-	}
+	display: flex;
+	align-items: center;
+	--text-divider-gap: 1rem;
+	margin: 2rem 0 2rem 0;
+}
 	
-	.text-divider::before,
-	.text-divider::after {
-		content: '';
-		height: 1px;
-		background-color: silver;
-		flex-grow: 1;
-	}
+.text-divider::before,
+.text-divider::after {
+	content: '';
+	height: 1px;
+	background-color: silver;
+	flex-grow: 1;
+}
 	
-	.text-divider::before {
-		margin-right: var(--text-divider-gap);
-	}
+.text-divider::before {
+	margin-right: var(--text-divider-gap);
+}
 	
-	.text-divider::after {
-		margin-left: var(--text-divider-gap);
+.text-divider::after {
+	margin-left: var(--text-divider-gap);
 }
