@@ -11,8 +11,8 @@ body {
 .navbar .collapse form .form-control{
   background-color: #212129;
   border: none;
-  padding: 4px 15px;
   color: rgb(163, 163, 163);
+  padding: 4px 15px;
   width: 330px;
 }
 
@@ -44,19 +44,19 @@ body {
 /* BANNER STYLES */
 
 .banner {
-  margin-bottom: 50px;
-  padding: 30px;
   background-color: #2d2d33;
   box-shadow: 6px 0px 10px 3px rgba(31, 31, 31, 0.473);
+  margin-bottom: 50px;
+  padding: 30px;
 }
 
 .banner .row {
-  display: flex;
-  justify-content: center;
   align-content: center;
   align-items: center;
+  display: flex;
   flex-direction: row;
   height: 100%;
+  justify-content: center;
 }
 
 .banner .banner-text {
@@ -69,8 +69,8 @@ body {
 
 @supports(object-fit: cover){
   .banner-img img{
-    width: 70%;
     object-fit: contain;
     object-position: center center;
+    width: 70%;
   }
 }
