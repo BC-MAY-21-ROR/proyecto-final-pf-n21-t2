@@ -81,9 +81,7 @@
   background-color: #212129;
 }
 
-input {
-  background-color: #282828;
-}
+
 
 .form-title {
   border-bottom: 1px solid orange;
@@ -108,25 +106,22 @@ input {
   width: 60%;
 }
 
-.btn, .button {
+.button {
   color: white;
   background-color: #F78528;
-}
-
-.button {
   padding: 5px 30px;
   transition: all .2s ease-in-out;
 }
 
 .button:hover {
-  color: white;
+  color: white ;
   background-color: darkorange;
   transform: scale(1.01);
   text-decoration: none;
 }
 
 .form-content-group {
-  color: white !important;
+  color: white ;
   width: 500px;
 }
 
@@ -136,12 +131,15 @@ input {
   font-size: 1.5rem;
 }
 
- input {
-  background-color:transparent !important; 
-  border:none !important;	
-  border-bottom: solid rgba(247, 133, 40, 1)!important;
-  color: white !important;
+ .indata {
+  background-color:transparent ; 
+  border:none ;	
+  border-bottom: solid rgba(247, 133, 40, 1) ;
+  color: white;
  }
+ 
+
+
 	 	
   	 	
 	
