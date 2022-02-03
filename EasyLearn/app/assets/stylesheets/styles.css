@@ -81,8 +81,6 @@
   background-color: #212129;
 }
 
-
-
 .form-title {
   border-bottom: 1px solid orange;
   margin-bottom: 7rem;
@@ -131,15 +129,10 @@
   font-size: 1.5rem;
 }
 
- .indata {
-  background-color:transparent ; 
+.indata {
+  background-color:transparent; 
   border:none ;	
   border-bottom: solid rgba(247, 133, 40, 1) ;
   color: white;
+  width: 30rem;
  }
- 
-
-
-	 	
-  	 	
-	
