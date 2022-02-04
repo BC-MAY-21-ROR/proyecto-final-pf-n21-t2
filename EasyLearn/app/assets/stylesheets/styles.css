@@ -1,5 +1,11 @@
+:root{
+  --bg-primary: #282828;
+  --bg-secundary: #212129;
+
+}
+
 .contenido {
-  background-color: #282828;
+  background-color: var(--bg-primary);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -26,7 +32,7 @@
 
 .main-content {
   border-top: 1px solid orange;
-  background-color: #282828;
+  background-color: var(--bg-primary);
   color: white;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
@@ -78,7 +84,7 @@
 }
 
 .form-main {
-  background-color: #212129;
+  background-color: var(--bg-secundary);
 }
 
 .form-title {
