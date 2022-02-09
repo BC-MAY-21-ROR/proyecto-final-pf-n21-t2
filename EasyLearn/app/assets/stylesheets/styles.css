@@ -4,7 +4,7 @@
 
 }
 
-.contenido {
+/* .contenido {
   background-color: var(--bg-primary);
   font-family: 'Montserrat', sans-serif;
 }
@@ -17,18 +17,18 @@
   margin: 0 auto;
   width: 80%;
 }
- 
+
 .nav-items {
   align-items: center;
   display: flex;
   font-size: 25px;
   gap: 2rem;
 }
- 
+
 .dropdown > .btn {
   font-size: 20px;
   font-weight: bold;
-}
+} */
 
 .main-content {
   border-top: 1px solid orange;

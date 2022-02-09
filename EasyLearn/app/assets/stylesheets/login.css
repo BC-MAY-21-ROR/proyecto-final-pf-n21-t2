@@ -8,17 +8,17 @@ h2{
 	text-align: center;
 }
 
-img{
+/* img{
 	height: 90px;
-}
+} */
 
-input{
+/* input{
 	background-color:transparent !important;
 	border:none !important;
 	border-bottom: solid rgba(247, 133, 40, 1)!important;
 	color: white !important;
 	margin-bottom: 1.5rem;
-}
+} */
 
 label{
 	font-size: 14px;
@@ -28,15 +28,16 @@ label{
 	line-height: 17px;
 }
 
-button{
+/* button{
 	background-color: rgba(247, 133, 40, 1)!important;
 	font: 94px;
 	width: 289px;
 	height: 59px;
 	border-radius: 15px!important;
 	margin-top: 1.5rem;
-}
+} */
 
+/* 
 span{
 	font-size: 24px;
 	font-style: normal;
@@ -48,7 +49,7 @@ span{
 a{
 	color: rgba(247, 133, 40, 1);
 	text-decoration: none;   
-}
+}*/
 
 .card{
 	background-color: rgba(228, 228, 228, 0.07) !important;
