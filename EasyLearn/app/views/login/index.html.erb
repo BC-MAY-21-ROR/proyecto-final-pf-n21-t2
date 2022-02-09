@@ -1,35 +1,35 @@
 
 
-<body>
+
 	<section class="vh-100 gradient-custom">
 		<div class="container h-100">
 			<div class="row d-flex justify-content-center align-items-center h-100">
 				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
-					<div class="card bg-dark text-white" style="border-radius: 1rem;">
+					<div class="card bg-dark text-white login_card" style="border-radius: 1rem;">
 						<div class="card-body p-5 text-center">
 							<div class="mb-md-5 pb-3">
-								<h2 >Easy Learn</h2>
-								<%= image_tag("easylearn-icon.png", :alt => "rss feed") %>
+								<h2 class="login_card_title" >Easy Learn</h2>
+								<%= image_tag("easylearn-icon.png", :alt => "rss feed",:class => "login_img") %>
 								<div class="text-divider">Login</div>
 								<form>
 									<div class="mb-3">
-										<label for="exampleInputEmail1" class="d-flex justify-content-start">Email</label>
-										<input type="email" class="form-control" id="exampleInputEmail1">
+										<label for="exampleInputEmail1" class="d-flex justify-content-start login_label">Email</label>
+										<input type="email" class="form-control login_input" id="exampleInputEmail1">
 									</div>
 									<div class="mb-3">
-										<label for="exampleInputPassword1" class="d-flex justify-content-start">Password</label>
-										<input type="password" class="form-control dark" id="exampleInputPassword1">
+										<label for="exampleInputPassword1" class="d-flex justify-content-start login_label">Password</label>
+										<input type="password" class="form-control login_input" id="exampleInputPassword1">
 									</div>
-									<p class="mb-0">I forgot my <a href="#" class="fw-bold">password</a></p>
-									<button type="submit" class="btn btn-dark"><span>Login</span></button>
+									<p class="mb-0">I forgot my <a href="#" class="fw-bold login_a">password</a></p>
+									<button type="submit" class="btn btn-dark login_button"><span class="login_span">Login</span></button>
 								</form>
 							</div>
 							<hr>
-							<p class="mb-0">Or create a new account <a href="#" class="fw-bold">here</a></p>
+							<p class="mb-0">Or create a new account <a href="#" class="fw-bold login_a">here</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-</body>
+
