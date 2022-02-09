@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
+  root 'login#index'
+
   get '/home', to: "home#index"
   get '/settings', to: "settings#index"
-  root 'login#index'
-  
+  get '/preferences', to: "preferences#preferences"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
