@@ -3,8 +3,8 @@
 	font-size: 64px;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 77px;
 	letter-spacing: 0em;
+	line-height: 77px;
 	text-align: center;
 }
 
@@ -14,26 +14,26 @@
 
 .login_input{
 	background-color:transparent !important;
-	border:none !important;
 	border-bottom: solid rgba(247, 133, 40, 1)!important;
+	border:none !important;
 	color: white !important;
 	margin-bottom: 1.5rem;
 } 
 
 .login_label{
+	color: rgba(247, 133, 40, 1);
 	font-size: 14px;
 	font-style: normal;
-	color: rgba(247, 133, 40, 1);
 	font-weight: 450;
 	line-height: 17px;
 }
 
 .login_button{
 	background-color: rgba(247, 133, 40, 1)!important;
-	font: 94px;
-	width: 289px;
-	height: 59px;
 	border-radius: 15px!important;
+	font: 94px;
+	height: 59px;
+	width: 289px;
 } 
 
 
@@ -41,8 +41,8 @@
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 750;
-	line-height: 29px;
 	letter-spacing: 0.08em;
+	line-height: 29px;
 }
 
 .login_a{
@@ -55,18 +55,18 @@
 }
 
 .text-divider {
-	display: flex;
-	align-items: center;
 	--text-divider-gap: 1rem;
+	align-items: center;
+	display: flex;
 	margin: 2rem 0 2rem 0;
 }
 	
 .text-divider::before,
 .text-divider::after {
-	content: '';
-	height: 1px;
 	background-color: silver;
+	content: '';
 	flex-grow: 1;
+	height: 1px;
 }
 	
 .text-divider::before {

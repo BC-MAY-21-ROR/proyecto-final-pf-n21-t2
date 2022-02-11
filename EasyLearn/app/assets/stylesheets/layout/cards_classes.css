@@ -1,9 +1,8 @@
 .cards-container {
-  padding: 20px 60px;
+  align-items: center;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  
+  padding: 20px 60px;
 }
 
 .cards-container > .row {
@@ -12,10 +11,10 @@
 }
 
 .card-deck .card {
-  width: 24%;
   background-color: #282828;
   border: 0px solid #FFF;
   box-shadow: 4px 4px 15px 1px rgb(31, 31, 31);
+  width: 24%;
 }
 
 .card > iframe {
