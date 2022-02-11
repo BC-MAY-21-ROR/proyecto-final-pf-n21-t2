@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-
-nav {
-	margin-bottom: 3rem;
-  align-items: center;
-  background-color:#282828;
-  border-bottom: #F78528 2px solid;
-  box-sizing: border-box;
-  color: white;
-  display: flex;
-  height: 56px; 
-  justify-content: space-between;   
-  padding: 10px 20px;
+.nav_search{
+  -ms-transform: translateY(-50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 body {
