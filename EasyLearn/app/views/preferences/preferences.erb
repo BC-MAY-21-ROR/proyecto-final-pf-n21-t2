@@ -1,0 +1,94 @@
+<%= content_for :title, "Preferences" %>
+
+<div class="container-fluid preferences-container">
+  <div class="container">
+    <div id="header"> 
+      <h1 class="text-center fw-bolder"><span style="color: #F78528;">Easy learn</span> alongs to the best teachers</h1>
+      <h3 class="text-center fw-light">It's time to learn new technologies</h3>
+      <br><br>
+      <h4 class="text-center fw-lighter">Please set your prefered content that you'ld like to see before start learning.</h4>
+    </div>
+    <div class="main-wrapper">
+      <div class="preference-options row g-0 gap-3 d-flex">
+        
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">HTML5</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">CSS3</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">JavaScript</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">MySQL</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">PHP</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">NodeJS</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">Angular</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">React</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">Ruby</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">RoR</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">PostgreSQL</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">Laravel</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">Java</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">GrphQL</label>
+        </div>
+
+        <div class="col">
+          <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
+          <label class="btn" for="btn-check">Swift</label>
+        </div>
+        
+      </div>
+
+      <%= link_to "Start learning", {controller: "home", action: "index"}, class: "btn fw-bold", id: "start_leraning"%>
+    </div>
+  </div>
+</div>
