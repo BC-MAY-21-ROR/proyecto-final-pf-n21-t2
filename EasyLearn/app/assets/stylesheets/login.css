@@ -1,4 +1,4 @@
-h2{
+.login_card_title{
 	font-family: Script MT;
 	font-size: 64px;
 	font-style: normal;
@@ -8,19 +8,19 @@ h2{
 	text-align: center;
 }
 
-/* img{
+.login_img{
 	height: 90px;
-} */
+}
 
-/* input{
+.login_input{
 	background-color:transparent !important;
 	border:none !important;
 	border-bottom: solid rgba(247, 133, 40, 1)!important;
 	color: white !important;
 	margin-bottom: 1.5rem;
-} */
+} 
 
-label{
+.login_label{
 	font-size: 14px;
 	font-style: normal;
 	color: rgba(247, 133, 40, 1);
@@ -28,17 +28,16 @@ label{
 	line-height: 17px;
 }
 
-/* button{
+.login_button{
 	background-color: rgba(247, 133, 40, 1)!important;
 	font: 94px;
 	width: 289px;
 	height: 59px;
 	border-radius: 15px!important;
-	margin-top: 1.5rem;
-} */
+} 
 
-/* 
-span{
+
+.login_span{
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 750;
@@ -46,12 +45,12 @@ span{
 	letter-spacing: 0.08em;
 }
 
-a{
+.login_a{
 	color: rgba(247, 133, 40, 1);
 	text-decoration: none;   
-}*/
+}
 
-.card{
+.login_card{
 	background-color: rgba(228, 228, 228, 0.07) !important;
 }
 
