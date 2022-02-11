@@ -6,6 +6,7 @@ body {
 .navbar {
   background-color: #282828;
   border-bottom: 1px solid #F78528;
+  padding: 0 50px;
 }
 
 .navbar .collapse form .form-control{
@@ -14,6 +15,8 @@ body {
   color: rgb(163, 163, 163);
   padding: 4px 15px;
   width: 330px;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .navbar .collapse form .search-icon { 
@@ -63,8 +66,12 @@ body {
   color: #fff; text-align: center;
 }
 
-.banner .banner-text h1{
+.banner .banner-text h1 {
   font-size: 3rem;
+}
+
+.banner .banner-text h3 {
+  font-weight: 300;
 }
 
 @supports(object-fit: cover){

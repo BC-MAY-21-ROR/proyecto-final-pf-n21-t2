@@ -4,32 +4,6 @@
 
 }
 
-.contenido {
-  background-color: var(--bg-primary);
-  font-family: 'Montserrat', sans-serif;
-}
-
-.nav {
-  align-items: center;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 80%;
-}
- 
-.nav-items {
-  align-items: center;
-  display: flex;
-  font-size: 25px;
-  gap: 2rem;
-}
- 
-.dropdown > .btn {
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .main-content {
   border-top: 1px solid orange;
   background-color: var(--bg-primary);
@@ -43,9 +17,9 @@
 .aside-profile {
   align-items: center;
   display: flex;
+  justify-content: space-around;
   padding-top: 4rem;
   padding-left: 1rem;
-  justify-content: center;
 }
 
 .aside-picture {
