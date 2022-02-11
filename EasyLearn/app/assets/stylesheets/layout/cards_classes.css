@@ -1,20 +1,25 @@
 .cards-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
   padding: 20px 60px;
 }
 
-.card-deck {
-  margin: 100px;
-}
-
-.card > iframe {
-  height: 240px;
-  width: 100%;
+.cards-container > .row {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .card-deck .card {
   background-color: #282828;
   border: 0px solid #FFF;
   box-shadow: 4px 4px 15px 1px rgb(31, 31, 31);
+  width: 24%;
+}
+
+.card > iframe {
+  height: 240px;
+  width: 100%;
 }
 
 .card-body {

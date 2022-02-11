@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-
+  
   root "login#index"
   get "/player", to: "player#index"
-  get "/settings", "settings#index"
-  get "/home", to: "home#index"
+  get '/home', to: "home#index"
+  get '/settings', to: "settings#index"
+  
+
   
 
 
