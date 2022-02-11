@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_224648) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_categories_on_name", unique: true
   end
 
   create_table "events", force: :cascade do |t|
@@ -31,12 +32,14 @@ ActiveRecord::Schema.define(version: 2022_02_03_224648) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["link", "user_id", "category_id"], name: "index_events_on_link_and_user_id_and_category_id", unique: true
   end
 
   create_table "preferences", force: :cascade do |t|
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_preferences_on_category_id", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,6 +51,7 @@ ActiveRecord::Schema.define(version: 2022_02_03_224648) do
     t.bigint "preference_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["email", "preference_id"], name: "index_users_on_email_and_preference_id", unique: true
   end
 
   create_table "videos", force: :cascade do |t|
@@ -59,6 +63,13 @@ ActiveRecord::Schema.define(version: 2022_02_03_224648) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["link", "user_id", "category_id"], name: "index_videos_on_link_and_user_id_and_category_id", unique: true
   end
 
+  add_foreign_key "events", "categories"
+  add_foreign_key "events", "users"
+  add_foreign_key "preferences", "categories"
+  add_foreign_key "users", "preferences"
+  add_foreign_key "videos", "categories"
+  add_foreign_key "videos", "users"
 end

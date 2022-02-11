@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/preferences', to: "preferences#index"
   get '/home', to: "home#index"
   get '/settings', to: "settings#index"
   root 'login#index'

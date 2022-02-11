@@ -10,8 +10,8 @@ class CreateVideos < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
-    add_index :videos [:link, :user_id, :category_id], unique:true
+    add_index :videos, [:link, :user_id, :category_id], unique:true
     add_foreign_key :videos , :users, column: :user_id
-    add_foreign_key :videos , :categories, column: :categories_id
+    add_foreign_key :videos , :categories, column: :category_id
   end
 end
