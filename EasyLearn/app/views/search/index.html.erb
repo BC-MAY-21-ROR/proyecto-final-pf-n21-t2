@@ -1,2 +1,60 @@
-<h1>Search#index</h1>
-<p>Find me in app/views/search/index.html.erb</p>
+<%= render "layouts/menu"%>
+
+<div class="results">
+  <h2 class="fw-normal">Resultados para la busqueda "programacion"</h2>
+</div>
+
+<div class="container-fluid search-container">
+  <div class="card">
+    <div class="row g-0">
+      <div class="col-sm-6 col-md-6 col-xl-4">
+        <iframe src="https://www.youtube.com/embed/MfeOZooNamI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-6 col-md-6 col-xl-8">
+        <div class="card-body">
+          <h5 class="card-title">Implemented AJAX with PHP</h5>
+          <p class="card-text">Learn how to share information from AJAX to PHP and viceversa.</p>
+          <%= link_to "Take class", "/player", class: "btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="row g-0">
+      <div class="col-sm-6 col-md-6 col-xl-4">
+        <iframe src="https://www.youtube.com/embed/GfCUnf2y4lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-6 col-md-6 col-xl-8">
+        <div class="card-body">
+          <h5 class="card-title">Contigous allocation - Calloc</h5>
+          <p class="card-text">
+            Calloc, is another function that we can use for dynamic memory management, this works in a similar way to malloc.
+          </p>
+          <%= link_to "Take class", "/player", class: "btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="row g-0">
+      <div class="col-sm-6 col-md-6 col-xl-4">
+        <iframe src="https://www.youtube.com/embed/fmyvWz5TUWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-6 col-md-6 col-xl-8">
+        <div class="card-body">
+          <h5 class="card-title">Rails - full course</h5>
+          <p class="card-text">Learn Rails from 0 in 4 hours.</p>
+          <%= link_to "Take class", "/player", class: "btn" %>
+        </div>
+      </div>
+    </div>
+    <div class="row g-0">
+      <div class="col-sm-6 col-md-6 col-xl-4">
+        <iframe src="https://www.youtube.com/embed/RqQ1d1qEWlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-sm-6 col-md-6 col-xl-8">
+        <div class="card-body">
+          <h5 class="card-title">Javascript</h5>
+          <p class="card-text">Learn JavaScript from 0.</p>
+          <%= link_to "Take class", "/player", class: "btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
