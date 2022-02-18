@@ -1,0 +1,6 @@
+<%= render "layouts/menu"%>
+
+<%= form_for Video.create do |f| %>
+  <%= f.text_field :link%>
+  <%= f.submit "Upload" %>
+<% end %>
