@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_19_212709) do
+ActiveRecord::Schema.define(version: 2022_02_21_205805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,11 +47,10 @@ ActiveRecord::Schema.define(version: 2022_02_19_212709) do
     t.string "description"
     t.string "email", default: "", null: false
     t.string "avatar_profile"
-    t.bigint "preference_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
-    t.index ["email", "preference_id"], name: "index_users_on_email_and_preference_id", unique: true
+    t.bigint "preference_id"
   end
 
   create_table "videos", force: :cascade do |t|
@@ -69,7 +68,6 @@ ActiveRecord::Schema.define(version: 2022_02_19_212709) do
   add_foreign_key "events", "categories"
   add_foreign_key "events", "users"
   add_foreign_key "preferences", "categories"
-  add_foreign_key "users", "preferences"
   add_foreign_key "videos", "categories"
   add_foreign_key "videos", "users"
 end
