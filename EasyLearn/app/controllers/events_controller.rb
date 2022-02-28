@@ -8,10 +8,6 @@ class EventsController < ApplicationController
     @events = Event.new
   end
 
-  def events_params
-    params.permit(:title, :description, :day, :hour, :link)
-  end
-
   def create
     @even = Event.new(events_params)
     if @even2 = Event.find_by(title:params[:title])
@@ -34,17 +30,8 @@ class EventsController < ApplicationController
     end
   end
 
-  def disable
-    @even = Event.find(params[:id])
-    if @even.status == true
-      if @even.update(:status=>0)
-        redirect_to events_path
-      end
-    else
-      if @even.update(:status=>1)
-        redirect_to events_path
-      end
-    end
+  def events_params
+    params.require(:event).permit(:title, :description, :day, :hour, :link)
   end
 
 end

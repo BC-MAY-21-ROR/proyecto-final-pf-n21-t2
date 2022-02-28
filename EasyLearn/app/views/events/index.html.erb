@@ -1,4 +1,4 @@
-<%= render "header"%>
+<%= render "layouts/menu"%>
 
 <div class="container mt-3 col-8">
 <div class="d-flex justify-content-end m-3">
@@ -57,7 +57,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="/create_even" method="post">
+            <form action="/create_event" method="post">
               <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
                 <div class="input-group form-group mb-3">
 									<input type="text" name ="title" id ="title" class="form-control" placeholder="title">
