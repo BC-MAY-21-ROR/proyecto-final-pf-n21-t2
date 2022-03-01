@@ -1,29 +1,26 @@
 class EventsController < ApplicationController
-
+  before_action :require_login
   def index
     @events = Event.all
   end
 
   def new
-    @events = Event.new
+    @event = Event.new
   end
 
   def create
-    @even = Event.new(events_params)
-    if @even2 = Event.find_by(title:params[:title])
-      redirect_to events_path, notice: 'You use this title already'
+    @event = Event.new(events_params, sessions[:user_id])
+    
+    if @event.save
+      redirect_to events_path
     else
-      if @even.save
-        redirect_to events_path
-      else
-        render :new
-      end
+      render "index"
     end
   end
 
   def edit
-    @even = Event.find(params[:title])
-    if @even.update(:title=> params[:title], :description=>params[:description],
+    @event = Event.find(params[:title])
+    if @event.update(:title=> params[:title], :description=>params[:description],
       :day=>params[:day],:hour=>params[:hour],
       :link=>params[:link])
       redirect_to events_path

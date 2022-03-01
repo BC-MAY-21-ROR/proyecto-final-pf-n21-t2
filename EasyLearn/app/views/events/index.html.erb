@@ -23,7 +23,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <%
+=begin%>
+ <tr>
       <% @events.each do |event|%>
       <th scope="row" class="text-center">
       <%= event.title%>
@@ -45,7 +47,9 @@
         </button>
       </td>
     </tr>
-    <% end %>
+    <% end %> 
+<%
+=end%>
 
     <div class="modal" id="addEvent" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
@@ -57,27 +61,26 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="/create_event" method="post">
-              <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-                <div class="input-group form-group mb-3">
-									<input type="text" name ="title" id ="title" class="form-control" placeholder="title">
-								</div>
-								<div class="input-group form-group mb-3">
-									<input type="text" name="description" id="description" class="form-control" placeholder="description">
-								</div>
-                <div class="input-group form-group mb-3">
-									<input type="text" name="day" id="day" class="form-control" placeholder="day">
-								</div>
-                <div class="input-group form-group mb-3">
-									<input type="text" name="hour" id="hour" class="form-control" placeholder="hour">
-								</div>
-                <div class="input-group form-group mb-3">
-									<input type="text" name="link" id="link" class="form-control" placeholder="link">
-								</div>
-								<div class="form-group">
-									<input type="submit" value="Add" class="btn btn-success float-right">
-								</div>
-            </form>
+          <%= form_for Event.new do |f| %>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :title, placeholder: "title", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :description, placeholder: "description", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :day, placeholder: "day", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :hour, placeholder: "hour", class: "form-control"%>
+            </div>
+            <div class="input-group form-group mb-3">
+              <%= f.text_field :link, placeholder: "link", class: "form-control"%>
+            </div>
+            <div class="form-group">
+              <%= f.submit class:"btn btn-success float-right" %>
+						</div>
+          <% end %>
           </div>
         </div>
       </div>
