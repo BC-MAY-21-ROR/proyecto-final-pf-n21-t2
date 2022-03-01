@@ -82,6 +82,12 @@ Frontend
 ![log-in](./img/c3a986ec-9d82-4d8b-b7e0-f9cc534024fe.jpg)
 ![home](./img/b2c26d50-3922-4152-95bb-43f6851118af.jpg)
 
+## Instalacion
+- Clona el repositorio
+- Copia el contenido del archivo /config/application.example en un archivo nuevo application.yml
+- Configura una variable de entorno para tu api_key
+
+
 ## Recursos
 
 - [Minimum Viable Product](https://www.agilealliance.org/glossary/mvp/#q=~(infinite~false~filters~(tags~(~'mvp))~searchTerm~'~sort~false~sortDirection~'asc~page~1))

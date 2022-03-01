@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
-    
-    <a class="navbar-brand text-white" href="#">Logo</a>
+    <%= link_to "Logo",root_path, class: "navbar-brand text-white" %>
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,15 +20,21 @@
         <li class="nav-item">
           <a class="nav-link text-white" href="#">My events</a>
         </li>
+
+        <li class="nav-item">
+          <%= link_to "/videos/new", class: "nav-link text-white" do%>
+            <span class="material-icons">add</span>
+          <% end %>
+        </li>
     
         <li class="nav-item dropdown mr-5">
           
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> MauricioNC </a>
           
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Settings</a>
+            <%= link_to "Settings",settings_path, class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Sign out</a>
+            <%= link_to "Sign out", {controller: "sessions", action: "destroy"}, class: "dropdown-item"%>
           </div>
         
         </li>
