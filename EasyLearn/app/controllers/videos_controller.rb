@@ -18,7 +18,7 @@ class VideosController < ApplicationController
       flash[:alert] = "The fields cannot be empty"
       redirect_to new_video_path
     else
-      @response = Faraday.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=#{@videoID}&key=AIzaSyC-039WYenwbFNwXQRAd3ynWW9AeEVn1rs")
+      @response = Faraday.get("https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=#{@videoID}&key=#{ENV["API_KEY"]}")
 
       @data = JSON.parse(@response.body)
 
