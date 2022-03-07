@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   resources :events
   
   get '/events', to: "events#index"
-  post '/create_event', to: "events#create"
   get '/events', to: 'events#new'
+  post 'edit_event/:id', to: "events#edit"
+  post 'delete_event', to: "events#delete"
 end
