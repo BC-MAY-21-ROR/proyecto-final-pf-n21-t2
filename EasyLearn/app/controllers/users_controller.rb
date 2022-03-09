@@ -15,8 +15,17 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def update
+    if @current_user.update(:name => params[:name], :email => params [:email], :description => params[:description], :password => params[:password])
+      
+  end
+
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end
+  def update_params
+    params.require(:user).permit(:name, :email, :description, :password)
+  end 
  
 end

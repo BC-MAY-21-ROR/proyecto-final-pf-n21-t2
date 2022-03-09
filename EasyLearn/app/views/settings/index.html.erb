@@ -3,36 +3,41 @@
   <main class="main-content">
     <div class="row m-auto main-content justify-content-between">
       <%= render "sidebar"%>
-      <div class="col-12 col-md-9 form-main">
-        <div class="container pt-5">
-          <div class="form-title">
-            <h1>Settings</h1>
-          </div>
-          <div class="form-content pt-5 ">
+        <div class="col-12 col-md-9 form-main">
+          <div class="container pt-5">
+            <div class="form-title">
+             <h1>Settings</h1>
+            </div>
+            <div class="form-content pt-5 ">
              <div class="form-content-profile ">
                 <img src="https://as1.ftcdn.net/v2/jpg/04/53/08/58/1000_F_453085847_F79K4TPRlcDp9XGLPpAbjuKG2WPG3GAe.jpg" class="form-content-profile_img pb-3" alt="User">
                 <a href="#" class="button mt-3">Browse</a>
              </div>
-             <div class="form-content-group ">
-                <div class="mb-3 row">
-                  <label for="exampleInputEmail1" class="form-label">Name</label>
-                  <input type="text" class="indata ml-3" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3 row">
-                  <label for="exampleInputEmail1" class="form-label">Email</label>
-                  <input type="email" class="indata ml-3" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3 row">
-                  <label for="exampleInputEmail1" class="form-label">Target</label>
-                  <input type="text" class="indata ml-3" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3 row">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="indata ml-3 " id="exampleInputPassword1">
-                </div>
+            <div class="form-content-group ">
+              <%= form_with(model: @user	, local: true) do |f|%>
+              <div class="form-label mb-3 row">
+                <%= f.label :name, class: "d-flex justify-content-start login_label" %><br/>
+                <%= f.text_field :name, class: "form-control login_input" %>
               </div>
+              <div class="form-label mb-3 row">
+								<%= f.label :email, class: "d-flex justify-content-start login_label" %><br/>
+								<%= f.email_field :email, class: "form-control login_input" %>
+						  </div>
+              <div class="form-label mb-3 row">
+								<%= f.label :Target, class: "d-flex justify-content-start login_label" %><br/>
+								<%= f.text_field :description, class: "form-control login_input" %>
+						  </div>
+					  	<div class="form-label mb-3 row">
+								<%= f.label :password, class: "d-flex justify-content-start login_label" %><br/>
+								<%= f.password_field :password, class: "form-control login_input indata ml-3" %>
+						  </div>
+					  	<div class="form-label mb-3 row">
+								<%= f.submit "Save", class: "btn btn-dark login_button mb-3" %>
+					  	</div>
+             <%end%>
             </div>
-         </div>
-       </div>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
