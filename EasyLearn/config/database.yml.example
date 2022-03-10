@@ -4,8 +4,8 @@
 postgresql: &postgresql
   adapter: postgresql
   host: localhost
-  username: p_final
-  password: p_finalBC2021
+  username: username
+  password: password
   pool: 5
   timeout: 5000
 development:

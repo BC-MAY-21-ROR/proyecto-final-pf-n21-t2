@@ -3,7 +3,6 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @cat = Category.all
-    
   end
 
   def new
@@ -20,12 +19,13 @@ class EventsController < ApplicationController
       end
   end
 
-  def edit
-    @event = Event.find(params[:id])
-    @event.update(:title=> params[:title], :description=>params[:description],
-      :day=>params[:day],:hour=>params[:hour],
-      :link=>params[:link],:category_id=>params[:category_id])
+  def update
+    @even = Event.find(params[:id])
+    if @even.update(:title=> params[:event][:title], :description=>params[:event][:description],
+      :day=>params[:event][:day],:hour=>params[:event][:hour],
+      :link=>params[:event][:link],:category_id=>params[:event][:category_id])
       redirect_to events_path
+    end
   end
 
   def delete
