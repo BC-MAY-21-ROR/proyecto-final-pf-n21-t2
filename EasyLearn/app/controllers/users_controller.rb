@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_login
+  before_action :require_login, only: [:editUser, :edit]
+  before_action :get_current_user, only: [:editUser, :edit]
   def new
     @user = User.new
   end
@@ -19,17 +20,25 @@ class UsersController < ApplicationController
   end
 
   def editUser
-    @user = @current_user
+   
   end
 
   def edit
-    @user = @current_user
-    if @user.update(update_params)
+     @user.update(update_params)
+     if @user.save
+      flash[:notice] = "User successfully update"
       redirect_to root_path
-    end
+     else 
+      redirect_to edit_path
+     end
+     
+    
   end
 
   private
+  def get_current_user
+    @user = @current_user
+  end
   def user_params 
     params.require(:user).permit(:name, :email, :password)
   end
