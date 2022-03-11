@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   get "videos", to: "videos#index"
   get "videos/new", to: "videos#new"
   post "videos", to: "videos#create"
+
+  resources :events
+  
+  get '/events', to: "events#index"
+  post 'delete_event', to: "events#delete"
 end
