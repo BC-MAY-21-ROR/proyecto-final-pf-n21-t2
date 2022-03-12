@@ -11,11 +11,12 @@
         <div class="aside-helpers">
           <div class="aside-helpers-buttons">
             <i class="fas fa-cog"></i>
-            <p class="aside-helpers-buttons_text">Settings</p>
+            <%= link_to "Settings",edit_path, class: "aside-helpers-buttons_text text-white" %>
           </div>
           <div class="aside-helpers-buttons">
             <i class="fas fa-play"></i> 
-            <p class="aside-helpers-buttons_text-minor">My content</p>
+            <%= link_to "My content",content_path, class: "aside-helpers-buttons_text text-white" %>
           </div>
         </div>
       </div>
+      

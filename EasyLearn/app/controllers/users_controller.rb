@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_login, only: [:editUser, :edit]
-  before_action :get_current_user, only: [:editUser, :edit]
+  before_action :require_login, only: [:editUser, :edit, :myContent]
+  before_action :get_current_user, only: [:editUser, :edit, :myContent]
   def new
     @user = User.new
   end
@@ -19,8 +19,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def myContent
+    @videos = Video.all
+  end
+
   def editUser
-   
   end
 
   def edit
@@ -31,8 +34,6 @@ class UsersController < ApplicationController
      else 
       redirect_to edit_path
      end
-     
-    
   end
 
   private

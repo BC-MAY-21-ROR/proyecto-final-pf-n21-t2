@@ -1,7 +1,8 @@
 <div class="cards-container">
   <div class="card-deck row gap-3">
     <% @videos.each do |v|%>
-      <div class="card col-md-3 col-sm-12 p-0">
+      <% if v.user_id == @current_user.id%>
+        <div class="card col-md-3 col-sm-12 p-0">
         <iframe src="https://www.youtube.com/embed/<%= v.link %>" title="<%= v.title %>" frameborder="0"></iframe>
         <div class="card-body">
           <h5 class="card-title"><%= v.title %></h5>
@@ -15,6 +16,7 @@
           </small>
         </div>
       </div>
+      <%end%>
     <% end%>
   </div>
 </div>

@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get "login", to: "sessions#new"
   get "edit", to: "users#editUser"
   post "edit", to: "users#edit"
+  get "content", to: "users#myContent"
   post "login", to: "sessions#create"
   get "logout", to: "sessions#destroy"
   resources :users, except: [:new]
   get 'search', to: "search#index"
-  get 'preferences', to: "preferences#index"
   get "player", to: "player#index"
   resources :videos
   
