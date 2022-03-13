@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get 'search', to: "search#index"
   get 'preferences', to: "preferences#index"
   get "player", to: "player#index"
+  get "player/watch", to: "player#index"
+
   get 'settings', to: "settings#index"
   
   resources :videos
