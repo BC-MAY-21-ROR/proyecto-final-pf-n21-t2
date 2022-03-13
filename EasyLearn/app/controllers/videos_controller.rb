@@ -13,7 +13,6 @@ class VideosController < ApplicationController
   
   def create
     @videoID = params[:video][:link]
-
     if @videoID.empty?
       flash[:alert] = "The fields cannot be empty"
       redirect_to new_video_path
