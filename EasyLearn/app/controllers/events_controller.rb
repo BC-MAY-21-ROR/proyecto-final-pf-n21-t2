@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   before_action :require_login
   def index
-    @events = Event.all
+    @events = Event.where(user_id: current_user)
     @cat = Category.all
   end
 
