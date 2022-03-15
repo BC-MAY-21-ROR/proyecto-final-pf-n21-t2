@@ -21,8 +21,8 @@
 }
 
 .player-wrapper .video .meta-data {
-  margin-top: 10px;
   background-color: rgba(26, 26, 26, 0.781);
+  margin-top: 10px;
   width: 80%;
 }
 
@@ -55,8 +55,8 @@
 
 .player-wrapper .events {
   max-height: 55rem;
-  overflow: hidden;
   overflow-y: visible;
+  overflow: hidden;
 }
 
 .player-wrapper .events::-webkit-scrollbar {
@@ -77,16 +77,16 @@
 
 
 .player-wrapper .events .card {
-  width: 100%;
   border: 1px solid rgba(65, 68, 73, 0.568);
+  width: 100%;
 }
 
 .related-content h1 {
-  width: 50%;
-  padding-bottom: 15px;
   border-bottom: 1px solid #F78528;
-  margin-bottom: 5rem;
   color: rgb(198, 198, 201);
+  margin-bottom: 5rem;
+  padding-bottom: 15px;
+  width: 50%;
 }
 
 .card-deck .card {
