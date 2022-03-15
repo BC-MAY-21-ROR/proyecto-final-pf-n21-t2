@@ -1,11 +1,6 @@
 .results {
   color: #c4c4c4;
   margin: 50px 0px;
-  padding: 20px;
-}
-
-.results h2 {
-  margin-left: 15rem;
 }
 
 .search-container {
@@ -41,6 +36,13 @@
 
 .search-container .card .card-body .btn {
   margin-top: 75px;
+}
+
+.description-text{
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 @media (max-width: 576px) {
