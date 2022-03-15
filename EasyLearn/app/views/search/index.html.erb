@@ -1,60 +1,52 @@
+<script>
+function hide(clas) {
+  var x = document.getElementsByClassName(clas);
+  for (let i=0;i<x.length;i++){
+    if (x[i].style.display === "none") {
+    x[i].style.display = "flex";
+    } else {
+    x[i].style.display = "none";
+    }
+  }
+}
+</script>
 <%= render "layouts/menu"%>
-
-<div class="results">
-  <h2 class="fw-normal">Resultados para la busqueda "programacion"</h2>
+<div class="results d-flex align-items-center flex-column ">
+  <h2 class="fw-normal">Resultados para la busqueda "<%=params[:query]%>"</h2>
+  <h4 class="fw-normal">Videos encontrados: <%=@video.length%><button onclick="hide('video')" class = "btn button m-2">ocultar</button></h4>
+  <h4 class="fw-normal ">Eventos encontrados: <%=@event.length%><button onclick="hide('event')" class = "btn button m-2">ocultar</button></h4>
 </div>
 
 <div class="container-fluid search-container">
+  
   <div class="card">
-    <div class="row g-0">
-      <div class="col-sm-6 col-md-6 col-xl-4">
-        <iframe src="https://www.youtube.com/embed/MfeOZooNamI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="col-sm-6 col-md-6 col-xl-8">
-        <div class="card-body">
-          <h5 class="card-title">Implemented AJAX with PHP</h5>
-          <p class="card-text">Learn how to share information from AJAX to PHP and viceversa.</p>
-          <%= link_to "Take class", "/player", class: "btn" %>
-        </div>
-      </div>
-    </div>
-    <div class="row g-0">
-      <div class="col-sm-6 col-md-6 col-xl-4">
-        <iframe src="https://www.youtube.com/embed/GfCUnf2y4lY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="col-sm-6 col-md-6 col-xl-8">
-        <div class="card-body">
-          <h5 class="card-title">Contigous allocation - Calloc</h5>
-          <p class="card-text">
-            Calloc, is another function that we can use for dynamic memory management, this works in a similar way to malloc.
-          </p>
-          <%= link_to "Take class", "/player", class: "btn" %>
-        </div>
-      </div>
-    </div>
-    <div class="row g-0">
-      <div class="col-sm-6 col-md-6 col-xl-4">
-        <iframe src="https://www.youtube.com/embed/fmyvWz5TUWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="col-sm-6 col-md-6 col-xl-8">
-        <div class="card-body">
-          <h5 class="card-title">Rails - full course</h5>
-          <p class="card-text">Learn Rails from 0 in 4 hours.</p>
-          <%= link_to "Take class", "/player", class: "btn" %>
-        </div>
-      </div>
-    </div>
-    <div class="row g-0">
-      <div class="col-sm-6 col-md-6 col-xl-4">
-        <iframe src="https://www.youtube.com/embed/RqQ1d1qEWlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="col-sm-6 col-md-6 col-xl-8">
-        <div class="card-body">
-          <h5 class="card-title">Javascript</h5>
-          <p class="card-text">Learn JavaScript from 0.</p>
-          <%= link_to "Take class", "/player", class: "btn" %>
-        </div>
-      </div>
-    </div>
+    <% @video.each do |v|%>
+          <div class="row g-0 video">
+            <div class="col-sm-6 col-md-6 col-xl-4 m-10">
+              <iframe src="https://www.youtube.com/embed/<%= v.link %>" title="<%= v.title %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= v.title %></h5>
+                <p class="card-text description-text"><%= v.description %></p>
+                <%= link_to "Take class", "/player", class: "btn" %>
+              </div>
+            </div>
+          </div>
+    <% end%>
+    <% @event.each do |e|%>
+          <div class="row g-0 event">
+            <div class="col-sm-6 col-md-6 col-xl-4 m-10 d-flex justify-content-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/1535/1535005.png" height=200rem title="<%= e.title %>">
+            </div>
+            <div class="col-sm-6 col-md-6 col-xl-8">
+              <div class="card-body">
+                <h5 class="card-title"><%= e.title %></h5>
+                <p class="card-text description-text"><%= e.description %></p>
+                <%= link_to "Start Meeting", e.link, class: "btn" %>
+              </div>
+            </div>
+          </div>
+    <% end%>
   </div>
 </div>
