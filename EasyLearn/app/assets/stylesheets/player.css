@@ -1,87 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-.nav_search{
-  -ms-transform: translateY(-50%);
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
-body {
-  background-color: #212129;
-  font-family: "Montserrat";
-  margin: 0;  
-  max-height: 100%;
-  max-width: 100%;
+.player-wrapper {
+  margin-bottom: 6rem;
 }
 
-h3 {
-  font-weight: bold;   
+.player-wrapper > div {
+  padding: 10px;
 }
 
-p { 
-  color: white;
-  margin: 0 15px 0 0 ;  
-}
-
-.content {
-  display: grid;
-  height: 100vh;
-  place-content: center;
+.player-wrapper .video {
   width: 100%;
 }
 
-.main-video {
-  height: 520px;
-  position: relative;
-  width: 1230px;
-} 
-
-.title {
-  color: white;
-  margin: 15px 0px;
+.player-wrapper .video iframe {
+  height: 44rem;
+  width: 80%;
 }
 
-.menu { 
-  display: flex;
-  width: 200px;
+.player-wrapper .video .meta-data {
+  background-color: rgba(26, 26, 26, 0.781);
+  margin-top: 10px;
+  width: 80%;
 }
 
-.username {
-  display: flex;
-  margin-right: 5px;
+.player-wrapper div .meta-data .card {
+  background-color: transparent;
 }
 
-.username > img {
-  height: 14px;
-  width: 18px;
+.player-wrapper div .meta-data .card .card-body{
+  padding: 15px;
 }
 
-.user {
-  align-items: center;
-  display: flex;
-}
-
-.profile-picture {
+.player-wrapper div .meta-data .card .card-body .author span{
+  font-size: 3.5rem;
   margin-right: 10px;
 }
 
-.video-suggested {
-  align-items: center;
-  display: flex;
-  height: 211px;
+.player-wrapper div .meta-data .card .card-footer {
   width: 100%;
 }
 
-.description {
-  margin: 40px 0 20px 0;
+.player-wrapper .events {
+  border-left: 1px solid rgba(88, 90, 92, 0.568);
 }
 
-.extra-video {
-  margin-right: 10px;
+.player-wrapper div .meta-data .card .card-footer,
+.player-wrapper .events .card .card-footer {
+  border-top: 1px solid rgba(65, 68, 73, 0.568);
+  color: rgb(114, 114, 114);
 }
 
-.user-option {
-  align-items: center;
-  display: flex;
+.player-wrapper .events {
+  max-height: 55rem;
+  overflow-y: visible;
+  overflow: hidden;
+}
+
+.player-wrapper .events::-webkit-scrollbar {
+  width: 0px;
+}
+
+.player-wrapper .events:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.player-wrapper .events::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.player-wrapper .events::-webkit-scrollbar-thumb {
+  background-color: #F78528;
+}
+
+
+.player-wrapper .events .card {
+  border: 1px solid rgba(65, 68, 73, 0.568);
+  width: 100%;
+}
+
+.related-content h1 {
+  border-bottom: 1px solid #F78528;
+  color: rgb(198, 198, 201);
+  margin-bottom: 5rem;
+  padding-bottom: 15px;
+  width: 50%;
+}
+
+.card-deck .card {
+  width: 22.8%;
 }

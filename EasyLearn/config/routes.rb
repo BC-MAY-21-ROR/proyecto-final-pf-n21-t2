@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   
   get '/events', to: "events#index"
   post 'delete_event', to: "events#delete"
+
+  get "player/watch", to: "player#index"
+  get 'settings', to: "settings#index"
 end
